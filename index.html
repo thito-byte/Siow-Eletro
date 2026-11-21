@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     SIOW ELETRO · index.html
+     Estrutura (o "esqueleto") do site. A aparência fica no style.css e o
+     funcionamento no script.js.
+
+     Para atualizar MATÉRIAS, AGENDA e PLAYLIST: edite as listas no começo
+     do script.js. Aqui no index.html ficam os textos fixos (frase da
+     abertura, títulos das seções, e-mail, links).
+     ===================================================================== -->
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">                                                    <!-- acentos funcionando -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">     <!-- site se ajusta ao celular -->
+  <title>Siow Eletro · A cena eletrônica do Maranhão</title>               <!-- nome na aba do navegador -->
+  <meta name="description" content="Eventos, notícias, agenda de festas e afters e sets de DJs da música eletrônica em São Luís e no Maranhão."> <!-- texto que aparece no Google -->
+  <link rel="icon" href="img/logo.png">                                     <!-- ícone da aba -->
+
+  <!-- Fontes do Google: Unbounded (títulos), Space Grotesk (textos), JetBrains Mono (detalhes) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;600;800&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">                                  <!-- aparência do site -->
+</head>
+
+<body class="loading">  <!-- "loading" trava a rolagem enquanto a tela de carregamento aparece -->
+
+<!-- ================= TELA DE CARREGAMENTO ================= -->
+<div class="loader" id="loader" aria-hidden="true">
+  <img src="img/logo.png" alt="">                                           <!-- logo que vai aparecendo -->
+  <div class="bar"><span></span></div>                                      <!-- barra verde enchendo -->
+  <div class="tag">MÚSICA ELETRÔNICA · SÃO LUÍS</div>                       <!-- texto embaixo da barra -->
+</div>
+
+<!-- ================= ABERTURA ================= -->
+<section class="hero">
+  <!-- Fundo animado (desenhado pelo script.js).
+       Para usar um vídeo no lugar, troque a linha do <canvas> por:
+       <video autoplay muted loop playsinline poster="img/capa.jpg"><source src="video.mp4" type="video/mp4"></video> -->
+  <canvas id="party" aria-hidden="true"></canvas>
+  <div class="shade"></div>                                                 <!-- sombra para o texto ficar legível -->
+
+  <!-- Barra do topo: MENU | logo | AGENDA -->
+  <header>
+    <button type="button" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span class="lines"><i></i><i></i></span><span class="txt">MENU</span></button>
+    <a class="logo" href="#"><img src="img/logo.png" alt="Siow Eletro"></a>
+    <a class="cta-top" href="#agenda"><span class="txt">AGENDA</span> &#187;</a>
+  </header>
+
+  <!-- Frase gigante da abertura (l1 = primeira linha, l2 = segunda linha em verde) -->
+  <div class="headline">
+    <h1>
+      <span class="l1"><b>A cena</b></span>
+      <span class="l2"><b><em>eletrônica</em></b></span>
+    </h1>
+  </div>
+
+  <!-- Texto de apoio e botões da abertura -->
+  <div class="sub">
+    <p>Eventos, notícias e curiosidades da música eletrônica no Maranhão, num só lugar.</p>
+    <div class="row">
+      <a class="btn" href="#agenda">Ver próximos eventos</a>
+      <a class="btn icon" href="https://www.instagram.com/sioweletroslz" target="_blank" rel="noopener" aria-label="Instagram da Siow Eletro">@sioweletroslz</a>
+    </div>
+  </div>
+  <div class="scroll">ROLE &#8595;</div>                                    <!-- "ROLE ↓" na vertical -->
+</section>
+
+<!-- ================= MENU (tela cheia) ================= -->
+<div class="menu" id="menu" aria-hidden="true">
+  <button type="button" class="icon-btn close" id="menuClose" aria-label="Fechar menu">&#10005;</button>
+  <span class="eyebrow">&#187; Navegue</span>
+  <nav>
+    <a class="item" href="#destaques">Destaques</a><br>
+    <a class="item" href="#agenda">Agenda</a><br>
+    <a class="item" href="#playlist">Playlist</a><br>
+    <a class="item" href="#contato">Contato</a>
+  </nav>
+</div>
+
+<!-- ================= DESTAQUES (matérias) ================= -->
+<section class="block" id="destaques">
+  <div class="wrap">
+    <div class="sec-head reveal-up">
+      <div>
+        <span class="eyebrow">&#187; News da cena</span>
+        <h2 class="h2">Em destaque <span>na ilha.</span></h2>
+      </div>
+      <a class="link-more" href="https://www.instagram.com/sioweletroslz" target="_blank" rel="noopener">VER TODAS NO INSTAGRAM &#8599;</a>
+    </div>
+
+    <!-- Os cards das matérias são criados aqui pelo script.js (lista MATERIAS) -->
+    <div class="bento" id="bento"></div>
+  </div>
+</section>
+
+<!-- ================= AGENDA ================= -->
+<section class="block" id="agenda">
+  <div class="wrap">
+    <div class="sec-head reveal-up">
+      <div>
+        <span class="eyebrow">&#187; Calendário eletrônico</span>
+        <h2 class="h2">Próximas festas <span>&amp; afters.</span></h2>
+      </div>
+    </div>
+
+    <div class="agenda">
+      <!-- Calendário -->
+      <div class="card cal reveal-up">
+        <!-- Filtros: Todos / Festas / Afters -->
+        <div class="filters" role="group" aria-label="Filtrar eventos">
+          <button type="button" data-f="todos" aria-pressed="true">Todos</button>
+          <button type="button" data-f="festa" aria-pressed="false">Festas</button>
+          <button type="button" data-f="after" aria-pressed="false">Afters</button>
+        </div>
+        <!-- Setas e nome do mês -->
+        <div class="cal-top">
+          <button type="button" class="icon-btn" id="prevM" aria-label="Mês anterior">&#8592;</button>
+          <h3 id="monthLabel" aria-live="polite"></h3>
+          <button type="button" class="icon-btn" id="nextM" aria-label="Próximo mês">&#8594;</button>
+        </div>
+        <div class="grid7" id="calGrid"></div>                               <!-- dias do mês (criados pelo script.js) -->
+        <div class="legend mono"><span><i></i>Festa</span><span><i class="after"></i>After</span></div> <!-- legenda das bolinhas -->
+      </div>
+
+      <!-- Lista de eventos (criada pelo script.js a partir da lista EVENTOS) -->
+      <div class="ev-list" id="evList" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLAYLIST ================= -->
+<section class="block" id="playlist">
+  <div class="wrap">
+    <div class="sec-head reveal-up">
+      <div>
+        <span class="eyebrow">&#187; Som da ilha</span>
+        <h2 class="h2">DJs de São Luís <span>no play.</span></h2>
+      </div>
+    </div>
+
+    <div class="player">
+      <!-- Card "Tocando agora" (preenchido pelo script.js) -->
+      <div class="card now reveal-up" id="nowCard">
+        <div>
+          <div class="now-head"><img id="nowCapa" class="now-capa" src="" alt="" width="72" height="72"><span class="mono">Tocando agora</span></div>
+          <h3 id="nowTitle" style="margin-top:12px"></h3>                    <!-- nome do set -->
+          <div class="who" id="nowWho"></div>                                <!-- DJ · gênero -->
+        </div>
+        <!-- Equalizador animado (18 barrinhas) -->
+        <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div>
+          <div class="controls">
+            <!-- Botão de play/pause -->
+            <button type="button" class="play" id="playBtn" aria-label="Tocar">
+              <svg id="playIcon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg>
+            </button>
+            <a class="note sc-link" id="nowLink" href="#" target="_blank" rel="noopener">Ouvir no SoundCloud &#8599;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lista de faixas (criada pelo script.js a partir da lista FAIXAS) -->
+      <div class="card tracks reveal-up" id="tracks"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO + RODAPÉ ================= -->
+<footer id="contato">
+  <!-- Bloco de contato com o e-mail -->
+  <div class="wrap contato">
+    <div>
+      <span class="eyebrow">&#187; Contato</span>
+      <h2 class="h2">Tem festa, pauta <span>ou set?</span></h2>
+    </div>
+    <div>
+      <p class="lead">Manda pra gente: divulgação de eventos, notícias da cena, sets de DJs locais e parcerias.</p>
+      <!-- Para trocar o e-mail: mude aqui (2 lugares nesta linha), no rodapé abaixo e no EMAIL do script.js -->
+      <div style="margin-top:22px"><a class="mail" href="mailto:sioweletroslz@gmail.com">sioweletroslz@gmail.com</a></div>
+      <div class="acoes">
+        <button type="button" class="btn" id="copiarEmail">Copiar e-mail</button>
+        <a class="btn icon" href="https://www.instagram.com/sioweletroslz" target="_blank" rel="noopener">@sioweletroslz &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Linha final: logo + links -->
+  <div class="wrap foot">
+    <div>
+      <img src="img/logo.png" alt="Siow Eletro">
+      <p class="mono" style="margin-top:14px">São Luís · MA · Eventos | Notícias | Curiosidades</p>
+    </div>
+    <nav aria-label="Rodapé">
+      <a href="mailto:sioweletroslz@gmail.com">E-MAIL</a>
+      <a href="https://www.instagram.com/sioweletroslz" target="_blank" rel="noopener">INSTAGRAM &#8599;</a>
+      <a href="#destaques">DESTAQUES</a>
+      <a href="#agenda">AGENDA</a>
+      <a href="#playlist">PLAYLIST</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ================= MATÉRIA COMPLETA (janela) ================= -->
+<!-- Fica escondida; o script.js preenche com a matéria clicada e mostra -->
+<div class="mat" id="mat" role="dialog" aria-modal="true" aria-labelledby="matTit" aria-hidden="true">
+  <article class="mat-box">
+    <button class="mat-fechar" id="matFechar" aria-label="Fechar matéria">&#10005;</button>  <!-- X de fechar -->
+    <div class="mat-foto"><img id="matFoto" src="" alt=""></div>                               <!-- foto -->
+    <div class="mat-scroll">
+      <div class="top"><span class="chip lime" id="matTag"></span><span class="mono" id="matData"></span></div> <!-- etiqueta + data -->
+      <h3 id="matTit"></h3>                                                                       <!-- título -->
+      <div class="mat-texto" id="matTexto"></div>                                                 <!-- texto completo -->
+      <div class="mat-acoes"><a class="btn icon" id="matPost" href="#" target="_blank" rel="noopener">Ver post no Instagram &#8599;</a></div>
+    </div>
+  </article>
+</div>
+
+<!-- Funcionamento do site (sempre no final, depois de todo o HTML) -->
+<script src="script.js"></script>
+</body>
+</html>
