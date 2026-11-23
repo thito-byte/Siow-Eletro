@@ -111,6 +111,7 @@ var EVENTOS=[
   {data:'2026-11-28',tipo:'festa',nome:'Luau Sunrise',local:'Guarapiranguinha',prod:'JE Prods · O Jordan Salva',lineup:['Igor Coelho'],extra:'Ingresso + translado',link:'https://www.instagram.com/ojordansalva/'},
   {data:'2026-11-28',tipo:'festa',nome:'Low Profile',local:'O Tucano · São Luís',prod:'Saint Louis',lineup:['A anunciar'],link:'https://www.instagram.com/saintlouislz/'},
   {data:'2026-12-12',tipo:'festa',nome:'Olympus',local:'Red Club · São Luís',prod:'RD Produções · YN Produções',lineup:['A anunciar'],link:'https://www.instagram.com/redclub_hall/'},
+  {data:'2026-12-04',tipo:'festa',nome:'Prévia Eternity',local:'Tucano Gastrobar · São Luís',prod:'Braba Prod · Detroit Vibes',lineup:['Pittelli','Mais nomes em breve'],extra:'Só convidados',link:'https://www.instagram.com/brabaprod_/'},
   {data:'2026-12-05',tipo:'festa',nome:'E.T.E.R.N.I.T.Y 2K26',local:'Palazzo Eventos · São Luís',prod:'Braba Prod',lineup:['GIU','Bruno Be'],link:'https://www.instagram.com/brabaprod_/'},
   {data:'2026-12-07',tipo:'festa',nome:'Sounds SLZ 2K26',local:'CH Eventos (antigo Terraço 77) · São Luís',prod:'4Mãos',lineup:['Dubdogz','Syon Trio','Volkoder'],link:'https://www.instagram.com/soundslz/'},
   {data:'2026-12-12',tipo:'festa',nome:'Black Box 9 anos',local:'Local a divulgar · Imperatriz',prod:'Black Box',lineup:['Atração internacional (Colômbia)','A anunciar'],link:'https://www.instagram.com/blackboxmsc/'},
