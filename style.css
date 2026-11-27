@@ -347,6 +347,8 @@ footer{border-top:4px solid var(--lime);padding:56px 0 40px}
 .foot nav{display:flex;gap:20px;flex-wrap:wrap}
 .foot nav a{color:#d0d0d0;text-decoration:none;font:600 13px 'JetBrains Mono';letter-spacing:.08em;min-height:44px;display:inline-flex;align-items:center}
 .foot nav a:hover{color:var(--lime)}
+.creditos{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:36px;padding-top:20px;border-top:1px solid #222;font:400 12px 'JetBrains Mono';letter-spacing:.06em;color:#8a8a8a}   /* linha de créditos no fim da página */
+.creditos strong{color:#d0d0d0;font-weight:600}
 
 
 /* ---------------------------------------------------------------------
