@@ -124,7 +124,7 @@ var EVENTOS=[
   {data:'2026-12-06',tipo:'after',nome:'After Eternity',local:'Área externa do Palazzo Eventos · São Luís',prod:'Braba Prod',lineup:['A anunciar'],extra:'A partir das 7h',link:'https://www.instagram.com/brabaprod_/'},
   {data:'2026-12-07',tipo:'festa',nome:'Sounds SLZ 2K26',local:'CH Eventos (antigo Terraço 77) · São Luís',prod:'4Mãos',lineup:['Dubdogz','Syon Trio','Volkoder'],link:'https://www.instagram.com/soundslz/'},
   {data:'2026-12-12',tipo:'festa',nome:'Black Box 9 anos',local:'Planeta · Imperatriz',prod:'Black Box',lineup:['Felipe Gordon','M. Vermelho','Alphano','Bea Santos','Eduardo Ribeiro Alves'],link:'https://www.instagram.com/blackboxmsc/'},
-  {data:'2026-12-18',tipo:'festa',nome:'Luau Sessions',local:'Cozinha Massari · São Luís',prod:'Triplice · Piquet Produções',lineup:['A anunciar'],extra:'Save the date',link:''},
+  {data:'2026-12-18',tipo:'festa',nome:'Luau Sessions',local:'Cozinha Massari · São Luís',prod:'Triplice · Piquet Produções',lineup:['A anunciar'],extra:'Save the date',link:'https://www.instagram.com/tripliceprod/'},
   {data:'2026-12-27',tipo:'festa',nome:'Réveillon Duna',local:'Villa Cocar, Arpoador · Tutóia',prod:'Aldeia Zen Camp · F3',lineup:['Curol','Mose'],extra:'27/12 a 01/01',link:'https://www.instagram.com/reveillon.duna/'},
   {data:'2026-12-28',tipo:'festa',nome:'Sands of Kismet',local:'Villa Cocar · Tutóia',prod:'Réveillon Duna',lineup:['Anna'],link:'https://www.instagram.com/sandsofkismet/'}
 ];
